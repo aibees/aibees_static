@@ -32,6 +32,6 @@ jobs:
           PORT: ${{ secrets.SSH_PORT }}
         run: |
           PORT=${PORT:-22}
-          rsync -avz --no-times --delete \
+          rsync -rz --delete \
             -e "ssh -p ${PORT}" \
             ./static/ ${USER}@${HOST}:/app/static/
