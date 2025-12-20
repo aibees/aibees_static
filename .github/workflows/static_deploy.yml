@@ -2,7 +2,7 @@ name: Deploy static to host
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - "static/**"
 
