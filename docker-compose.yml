@@ -1,0 +1,10 @@
+services:
+  static-nginx:
+    build: .
+    container_name: static-nginx
+    ports:
+      - "5555:80"
+    volumes:
+      - /app/static:/app/static:ro
+    restart: unless-stopped
+
